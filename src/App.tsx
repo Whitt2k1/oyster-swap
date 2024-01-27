@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.less";
-import { SocialIcon } from 'react-social-icons'
+import GitHubButton from "react-github-btn";
 import { Routes } from "./routes";
 
 function App() {
@@ -8,19 +8,29 @@ function App() {
     <div className="App">
       <div className="Banner">
         <div className="Banner-description">
-          Please Verify You Are At Reaperswap.com
+          Swap is unaudited software. Use at your own risk.
         </div>
       </div>
       <Routes />
       <div className="social-buttons">
-        <SocialIcon url="www.twitter.com"
-          href="https://twitter.com"
+        <GitHubButton
+          href="https://github.com/project-serum/oyster-swap"
+          data-color-scheme="no-preference: light; light: light; dark: light;"
+          data-icon="octicon-star"
+          data-size="large"
+          data-show-count={true}
+          aria-label="Star solana-labs/oyster-swap on GitHub"
+        >
+          Star
+        </GitHubButton>
+        <GitHubButton
+          href="https://github.com/project-serum/oyster-swap/fork"
           data-color-scheme="no-preference: light; light: light; dark: light;"
           data-size="large"
-          aria-label="Visit Our Twitter"
+          aria-label="Fork project-serum/oyster-swap on GitHub"
         >
-          Twitter
-        </SocialIcon>
+          Fork
+        </GitHubButton>
       </div>
     </div>
   );
